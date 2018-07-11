@@ -17,6 +17,8 @@ cache: pip
 
 install:
   - pip install -r requirements.txt
+  - curl -O http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-tools-1.8.2.jar
+
 
 script:
   python3 -m pylint src/
