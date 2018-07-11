@@ -18,6 +18,8 @@ cache: pip
 install:
   - pip install -r requirements.txt
   - curl -O http://central.maven.org/maven2/org/apache/avro/avro-tools/1.8.2/avro-tools-1.8.2.jar
+  - find data/ -name "*.protocol.avdl" | awk -F\/ 'BEGIN {ORS=""} {split($NF,a,"."); print $0" "; print a[1]"\n"}' | xargs -n 2 sh -c 'java -jar avro-tools-1.8.2.jar idl2schemata $0 data/temp_avsc/$1'
+  - nosetests --nologcapture -x -s -v src/test/
 
 
 script:
