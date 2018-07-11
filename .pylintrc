@@ -1,0 +1,109 @@
+[MASTER]
+load-plugins=pylint_quotes
+
+max-line-length=100
+max-module-lines=1000
+jobs=2
+
+# Loop variables in list comprehensions and generator expressions.
+inlinevar-naming-style=snake_case
+class-attribute-naming-style=snake_case
+const-naming-style=snake_case
+min-public-methods=0
+overgeneral-exceptions=
+
+disable=parameter-unpacking,
+        unpacking-in-except,
+        old-raise-syntax,
+        backtick,
+        long-suffix,
+        old-ne-operator,
+        old-octal-literal,
+        import-star-module-level,
+        too-many-boolean-expressions,
+        non-ascii-bytes-literal,
+        raw-checker-failed,
+        bad-inline-option,
+        locally-disabled,
+        locally-enabled,
+        file-ignored,
+        suppressed-message,
+        useless-suppression,
+        deprecated-pragma,
+        apply-builtin,
+        basestring-builtin,
+        buffer-builtin,
+        cmp-builtin,
+        coerce-builtin,
+        execfile-builtin,
+        file-builtin,
+        long-builtin,
+        raw_input-builtin,
+        reduce-builtin,
+        standarderror-builtin,
+        unicode-builtin,
+        xrange-builtin,
+        coerce-method,
+        delslice-method,
+        getslice-method,
+        setslice-method,
+        no-absolute-import,
+        old-division,
+        dict-iter-method,
+        dict-view-method,
+        next-method-called,
+        metaclass-assignment,
+        indexing-exception,
+        raising-string,
+        reload-builtin,
+        oct-method,
+        hex-method,
+        nonzero-method,
+        cmp-method,
+        input-builtin,
+        round-builtin,
+        intern-builtin,
+        unichr-builtin,
+        map-builtin-not-iterating,
+        zip-builtin-not-iterating,
+        range-builtin-not-iterating,
+        filter-builtin-not-iterating,
+        using-cmp-argument,
+        eq-without-hash,
+        div-method,
+        idiv-method,
+        rdiv-method,
+        exception-message-attribute,
+        invalid-str-codec,
+        sys-max-int,
+        bad-python3-import,
+        deprecated-string-function,
+        deprecated-str-translate-call,
+        deprecated-itertools-function,
+        deprecated-types-field,
+        next-method-defined,
+        dict-items-not-iterating,
+        dict-keys-not-iterating,
+        dict-values-not-iterating,
+        missing-docstring,
+        no-self-use,
+        too-many-locals,
+        too-many-instance-attributes,
+        too-many-arguments,
+        too-many-statements,
+        unnecessary-lambda,
+        anomalous-backslash-in-string,
+        cell-var-from-loop,
+        redefined-outer-name,
+        keyword-arg-before-vararg
+
+notes=FIXME
+init-hook='import sys; import os; sys.path.append(os.path.join(os.getcwd(), 'src')); sys.path.append(os.path.join(os.getcwd()));'
+
+
+max-args=7
+good-names=q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m,ex,df,ts,op,at,pe,fs,wr,rn,ds,st,et,mp,pm,ws
+
+[STRING_QUOTES]
+string-quote=single
+triple-quote=double
